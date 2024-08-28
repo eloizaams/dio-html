@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias com HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #333;
+        }
+        h3{
+            color:orange
+        }
+
+    </style>
+</head>
+<body>
+   <h1>Trabalhando com Mídias utilizando HTML</font></h1>
+   <p>Como colocar imagens, vídeos, músicas, para enriquecer a experiência do usuário no seu site.</p>
+   <h2>Tags de mídia</h2>
+   <p>Mídia - tudo que está relacionado som e imagem.</p>
+
+   <h3>Tag &ltimg&gt</h3>
+   <h4>GIF</h4>
+   <p>Os gifs são formados por várias imagens interpoladas executadas em loop pelo sistema.</p>
+   <p>O gif não utilizam alta resolução porque o arquivo ficaria muito grande.</p>
+   <img src="carregando.gif" width="300">
+
+   <h4>JPEG e PNG</h4>
+   <p>São imagens geradas por modos de compressão diferentes. O jpg comprime mais, mas perde mais resolução que o png.A vantagem do png é conseguir utilizar os recursos de transparência.</p>
+   <h5>Imagem jpg</h5>
+   <img src="folhas.jpg" width="300">
+   <h5>Imagem png</h5>
+   <img src="folhas.png" width="300">
+
+   <h4>SVG</h4>
+   <p>Imagem vetorial, grava as coordenadas da imagem e não os pixels. É limitado a desenhos vetoriais. Não perde a resolução quando aumenta o tamanho.</p>
+   <h5>Imagem SVG</h5>
+   <svg>
+    <img src="globe.svg" width="100">
+   </svg>
+
+   <h4>Parâmetros title e alt</h4>
+   <p>Usados dentro da tag  &ltimg&gt.</p>
+   <p>O <i>title</i> é o que aparece quando passa o mouse em cima da imagem, pode ser o nome ou alguma instrução. </p>
+   <p>O <i>alt</i> é usado para acessibilidade, ele contém uma descrição da imagem, os robôs leem essa descrição.</p>
+   <img src="borboleta.jpeg" title="Borboleta" alt="Imagem focada de uma borboleta com asas coloridas, azul e amarela pousada sobre um elemento da natureza com algumas folhas desfocadas ao fundo">
+
+   <h3>Tag &ltaudio&gt</h3>
+   <p>É uma tag nativa do navegador. Colocar o atributo <i>controls</i> para exibir o controlador e <i>autoplay</i> para começar a tocar assim que carregar a página.</p>
+   <audio controls>
+        <source src="music1.mp3" />
+        Seu navegador não tem suporte para este áudio
+   </audio>
+
+   <h3>Tag &ltvideo&gt</h3>
+   <p>É bom ter atenção ao navegador, pois cada navegador vai rendereizar o vídeo de um jeito diferente. Também é uma tag nativa do navegador.</p>
+   <p>Pode deixar mais de um arquivo dentro da tag video que se ele não conseguir abrir o primeiro ele tenta o próximo. A desvantagem é que carrega dois vídeos e renderiza apenas um.</p>
+   <video controls width="300">
+    <source src="video.mp4" >
+    <source src="video.webm" >
+    <track src="legenda.vtt" kind="captions" srclang="en"></track>
+    <track default src="legenda-ptbr.vtt" kind="captions" srclang="pt-br"></track>
+    Seu navegador não suporta vídeo.
+   </video>
+
+   <h3>Tag &lttrack&gt</h3>
+   <p>Track significa legenda. É uma tag utilizada dentro da tag vídeo. O arquivo que inclui a legenda pode ser do tipo vtt ou srt. Um video pode ter mais de um arquivo de legenda, cada uma em um idioma. </p>
+
+   <h3>Tag &ltiframe&gt</h3>
+   <p>Evolução do embed, permite anexar conteúdo externo ao site.</p>
+   <h4>Video do YouTube</h4>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/2qDVxh_HBCw?si=VK5eLnvKiFJz3IZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+   <h4>Google Maps</h4>
+   <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59509.33976365512!2d-43.78970016523439!3d-21.218610637543563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1f575a56f36c7%3A0x352b824be8a084e2!2sBarbacena%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1724854038973!5m2!1spt-BR!2sbr"
+      width="400"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+</body>
+</html>
