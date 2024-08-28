@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de formulários</title>
+</head>
+<body>
+    <h2> Este é o formulário:</h2>
+    <form name="signup" onsubmit="alert('Enviei o formulário');"autocomplete="off" target="_blank" method="POST" action="#">
+        <label>Text: </label><input type="text"><br>
+        <label>Number:</label><input type="number" min="0" max="99" step="5"><br>
+        <label>Range:</label><input type="range" min="0" max="100" value="10"><br>
+        <label>Color:</label><input type="color"><br>
+        <label>E-mail:</label><input type="email"><br>
+        <label>URL:</label><input type="url"><br>
+        <label>Date:</label><input type="date"><br>
+        <label>Week:</label><input type="week"><br>
+        <label>Month:</label><input type="month"><br>
+        <label>Checkbox:</label><input type="checkbox"><input type="checkbox"><br>
+        <label>Radio:</label><input type="radio" name="aceita"><input type="radio" name="aceita"><br>
+        <label>Hidden (Campo oculto do usuário):</label><input type="hidden"><br>
+        <label>File:</label><input type="file" multiple><br>
+        <label>Search:</label><input type="search"><br>
+        <label>Image</label><input type="image" src="image.png" alt="Submit" width="96" height="48"><br>
+        <label>Reset:</label><button type="reset">Apagar</button><br>
+        <label>Button:</label><button>Enviar</button><br>
+        <label>Select: </label>
+        <select name="role">
+            <option value="">Selecione</option>
+            <option selected value="op1">Opção 1</option>
+            <option value="op2">Opção 2</option>
+            <option value="op3">Opção 3</option>
+        </select><br><br>
+    </form>
+
+    <h4><a href="index.html">Voltar</a></h4>
+    
+</body>
+</html>

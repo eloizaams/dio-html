@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <h2>Tipos de select box</h2>
+    <!-- Tratar o evento onsubmit dentro do form, pois no formulário quando aperta "Enter" ele automaticamente submit
+          Fazendo assim evita que o formulário seja enviado acidentalmente pelo usuário após preencher algum campo-->
+    <form onsubmit="" method="get">
+        <label>Nome: </label><input type="text" name="name"><br><br>
+        <label>Cargo: </label>
+        <select name="role">
+            <option selected value="">Selecione o cargo</option>
+            <option value="gerente">Gerente</option>
+            <option value="diretor">Diretor</option>
+            <option value="presidente">Presidente</option>
+        </select><br><br>
+
+
+        <label>Assunto: </label><input type="text" name="subject"><br><br>
+
+        <button type="submit">Enviar</button><br><br>
+
+    </form>
+    <h4><a href="index.html" >Voltar</a></h4>
+</body>
+</html>
