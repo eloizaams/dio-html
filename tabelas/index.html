@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas</title>
+    <style>
+      table {
+        border: solid 1px #e1e1e1;
+        box-shadow: 11px 22px 5px 0px rgba(112, 110, 112, 1);
+      }
+      thead th {
+        background-color: #000;
+        color: #fff;
+      }
+      tfoot td {
+        background-color: #aaa;
+      }
+      /* Efeito zebrado */
+      tr:nth-child(even) {
+        background-color: #f2f2f2; /* Cor para linhas pares */
+      }
+      tr:hover td {
+        background-color: #e1e1e1;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Uso de tabelas em HTML</h1>
+    <p>Usda para apresentar dados em formato tabular.</p>
+    <h2>Tag &lttable&gt</h2>
+    <p>
+      Essa tag define o espaço do HTML onde serão trabalhados os dados
+      tabulares.
+    </p>
+
+    <h3>Atributos da tag &lttable&gt</h3>
+    <ul>
+      <li>border</li>
+      <li>width</li>
+      <li>align</li>
+      <li>cellspacing</li>
+      <li>cellpadding</li>
+      <li>sumary</li>
+    </ul>
+
+    <h3>Tag &lttr&gt</h3>
+    <p>
+      <i>tr</i> é usado para delimitar uma linha da tabela, engloba todas as
+      células que compõe a linha.
+    </p>
+    <p>
+      Efeito "zebrado" à tabela pode-se usar o estilo :nth-child(even) no CSS.
+    </p>
+    <p>
+      Para que a linha fique em evidência quando passa o mouse usa-se o estilo
+      :hover td no CSS,
+    </p>
+
+    <h3>Tag &lttd&gt e &ltth&gt</h3>
+    <ul>
+      <li>
+        <i>th</i> indica o cabeçalho da tabela. Deve-se colocar o menor nome
+        possível para o campo e usar o atribulto <i>title</i> para colocar uma
+        descrição mais completa que vai aparecer quando passar o mouse sobre o
+        campo.
+      </li>
+      <li><i>th</i> indica as células que compõem a linha da tabela</li>
+    </ul>
+
+    <h3>Tags &lttbody&gt, &ltthead&gt e &lttfoot&gt</h3>
+    <ul>
+      <li><i>tbody</i> tag usada para envolver o corpo da tabela.</li>
+      <li><i>thead</i> tag usada para envolver o cabeçalho da tabela.</li>
+      <li><i>tfoot</i> tag usada para envolver o rodapé da tabela.</li>
+    </ul>
+
+    <h3>Tag &ltcaption&gt</h3>
+    <p>
+      Contém a descrição da tabela. É o nome da tabela. Aparece no topo da
+      tabela.
+    </p>
+
+    <h3>Box Shadow</h3>
+    <p>
+      Site que facilita a geração do código para a sombra a ser aplicada à
+      tabela.
+    </p>
+    <a href="https://www.cssmatic.com/box-shadow">Box Shadow Generator</a>
+
+    <h3>Mesclar células</h3>
+    <p>
+      Para mesclar células dentro de uma linha da tabela, utiliza-se o atributo <i>colspan</i> e
+      coloca como valor quantas células devem ser mescladas.
+      Para mesclar colunas utiliza-se o atributo <i>rowspan</i> e coloca como valor quantas linhas devem ser mescladas.
+    </p>
+
+    <table
+      sumary="Resumo detalhado sobre a tabela, não aparece na tela, mas é lida pelos robôs, facilitando a acessibilidade."
+      border="0"
+      width="200"
+      align="center"
+      cellspacing="3"
+      cellpadding="5"
+    >
+      <caption>
+        Tabela de nomes e idades dos clientes.
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="2">Minha Tabela</th>
+        </tr>
+        <tr>
+          <th title="Nome Completo">Nome</th>
+          <th>Idade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Eloiza</td>
+          <td>44</td>
+        </tr>
+        <tr>
+          <td>Maria</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>João</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>Júlia</td>
+          <td>26</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>6</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
