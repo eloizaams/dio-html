@@ -1,3 +1,3 @@
 # Curso HTML - DIO
 
-[Acesse o conteúdo do curso](index.html)
+[Acesse o conteúdo do curso](https://eloizaams.github.io/dio-html/)
