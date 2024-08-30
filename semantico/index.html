@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Semântico</title>
+    <meta
+      name="description"
+      content="Curso de HTML semântico da DIO - com exemplos práticos!"
+    />
+    <style>
+      body {
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 15px;
+        background-color: #f1f1f1;
+        color: #333;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+      }
+      nav a {
+        text-decoration: none;
+        padding: 3px;
+        color: #333;
+      }
+      nav a:hover {
+        color: #f1f1f1;
+        background-color: #333;
+      }
+      article time {
+        font-style: italic;
+      }
+      blockquote {
+        background-color: #ddd;
+        padding: 10px;
+        border-left: solid 5px #6060f6;
+      }
+      article q {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="inicio">Entendendo o HTML Semântico</h1>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#item1">HTML Semântico</a></li>
+          <li><a href="#item2">Melhorias nas versões do HTML</a></li>
+          <li><a href="#item3">Acessibilidade</a></li>
+          <li><a href="#item4">Web Scraping</a></li>
+          <li><a href="#item5">&ltmain&gt, &ltheader&gt, &ltfooter&gt</a></li>
+          <li><a href="#item6">&ltnav&gt, &ltsection&gt, &ltaside&gt</a></li>
+          <li><a href="#item7">&ltarticle&gt, &ltblockquote&gt, &ltq&gt</a></li>
+          <li>
+            <a href="#item8">&ltfigure&gt, &ltfigcaption&gt, &ltpicture&gt</a>
+          </li>
+          <li><a href="#item9">Resenha: o que é SEO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="objetivo">
+        <h2>Objetivo Geral</h2>
+        <p>
+          Virar expert em semântica no HTML. Saber mais sobre a importância da
+          acessibilidade no HTML. Conhecer novas tags estruturais e criar um
+          site do jeito que tem que ser.
+        </p>
+      </section>
+
+      <section id="itens">
+        <article id="item1">
+          <header>
+            <h2>HTML Semântico</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>
+            HTML é o primeiro padrão para a criação de páginas web. O HTML
+            Semântico utiliza tags específicas para organizar e estruturar o
+            conteúdo da página, fazendo com que o HTML faça sentido, facilitando
+            a navegação e a manutenção do conteúdo. Tags semânticas ajudam robôs
+            e leitores de tela a interpretar melhor o contexto.
+          </p>
+        </article>
+
+        <article id="item2">
+          <header>
+            <h2>Melhorias nas versões do HTML</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>
+            A grande tendência é que o HTML passe a ser apenas estrutural,
+            deixando a formatação para o CSS.
+          </p>
+          <p>
+            <a
+              href="https://www.w3.org/TR/html5-diff/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Diferenças entre HTML 4 e HTML 5
+            </a>
+          </p>
+        </article>
+
+        <article id="item3">
+          <header>
+            <h2>Acessibilidade - <i>"Internet é para TODOS"</i></h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>
+            Acessibilidade em HTML refere-se às práticas e recursos que tornam
+            websites e aplicações web acessíveis a todos os usuários, incluindo
+            pessoas com deficiências. Isso envolve o uso de elementos
+            semânticos, atributos como <code>alt</code> em imagens, e ARIA
+            (Accessible Rich Internet Applications) para melhorar a navegação
+            por leitores de tela, teclados e outros dispositivos assistivos,
+            garantindo que o conteúdo seja compreensível e funcional para todos.
+          </p>
+          <p>
+            <a
+              href="https://www.w3.org/WAI/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WAI - Web Acessibility Initiative
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WCAG - Web Content Acessibility Guidelines
+            </a>
+          </p>
+        </article>
+
+        <article id="item4">
+          <header>
+            <h2>Web Scraping</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>
+            <strong>"Rastreador" (Crawler)</strong> - é um termo genérico para
+            qualquer programa usado para descobrir e examinar sites
+            automaticamente seguindo links entre páginas da Web.
+          </p>
+          <p>
+            <strong>Web scraping</strong> é a técnica de extrair dados de sites
+            de forma automatizada. É amplamente utilizado para mineração de
+            dados, monitoramento de preços, coleta de informações para pesquisa,
+            entre outros fins.
+          </p>
+          <p>
+            Embora não seja ilegal por si só, deve-se ser ético ao utilizá-lo.
+            Bem feito, o Web Scraping pode nos ajudar a fazer o melhor uso da
+            web, como exemplificado pelo Google Search Engine.
+          </p>
+        </article>
+
+        <article id="item5">
+          <header>
+            <h2>&ltheader&gt, &ltmain&gt, &ltfooter&gt</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <section>
+            <h3>&ltheader&gt</h3>
+            <p>Cabeçalho da página.</p>
+          </section>
+          <section>
+            <h3>&ltmain&gt</h3>
+            <p>
+              Tag que contém a funcionalidade central da aplicação. Deve haver
+              apenas uma por página e conter o conteúdo principal, não repetido
+              em outras páginas.
+            </p>
+            <p>
+              Mais sobre a tag
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                &ltmain&gt </a
+              >.
+            </p>
+          </section>
+          <section>
+            <h3>&ltfooter&gt</h3>
+            <p>Rodapé da página.</p>
+            <p>
+              Entre as tags semânticas que podem ser utilizadas no footer, temos
+              a <code>&ltaddress&gt</code>, que indica que o conteúdo é um
+              endereço.
+            </p>
+          </section>
+        </article>
+
+        <article id="item6">
+          <header>
+            <h2>&ltnav&gt, &ltsection&gt, &ltaside&gt</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <section>
+            <h3>&ltsection&gt</h3>
+            <p>
+              Agrupa conteúdo relacionado em uma seção distinta, útil para
+              estruturar capítulos ou tópicos dentro de uma página. Não deve ser
+              usada como um container genérico, para isso que a &ltdiv&gt serve;
+              especialmente quando a seção é apenas com propósito de aplicação
+              de estilo. Um regra de ouro é
+              <q
+                >usar quando uma seção deva aparecer logicamente na estrutura de
+                um documento.</q
+              >
+            </p>
+          </section>
+          <section>
+            <h3>&ltnav&gt</h3>
+            <p>
+              Define um bloco de links de navegação, como menus ou barras de
+              navegação. Geralmente é usada a lista não ordenada para indicar os
+              links.
+            </p>
+            <p>
+              Dependendo do local em que ela é colocada indica sua importância
+              no contexto da página.
+            </p>
+            <p>
+              <strong>Dica: </strong>Dentro da tag &lta&gt se colocar
+              <i>href="tel:+55xxXXXXXXXXX"</i> ela abre o aplicativo de ligação.
+            </p>
+          </section>
+          <section>
+            <h3>&ltaside&gt</h3>
+            <p>
+              Usada para conteúdo complementar ou relacionado ao principal, como
+              barras laterais, anúncios ou links adicionais.
+            </p>
+          </section>
+        </article>
+
+        <article id="item7">
+          <header>
+            <h2>&ltarticle&gt, &ltblockquote&gt, &ltq&gt</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <section>
+            <h3>&ltarticle&gt</h3>
+            <p>
+              É usada para definir um conteúdo independente e autossuficiente,
+              como um artigo de jornal, post de blog ou qualquer outra peça de
+              conteúdo que possa ser distribuída de forma independente.
+            </p>
+            <p>
+              Permite aninhamento. Quando coloca um 'article' dentro de outro,
+              semanticamente falando, o article de dentro é relacionado ao de
+              fora.Um bom exemplo seriam perguntas e respostas.
+            </p>
+            <p>
+              O uso da tag 'time' com parâmetro 'pubdate' dentro do 'article'
+              também é interessante pois semanticamente significa a data de
+              publicação do artigo.
+            </p>
+            <article>
+              <h5>Exemplo de uso do 'article'</h5>
+              <p>Artigo publicado em <time pubdate>29/08/2024 20:00</time></p>
+              <p>Qual o seu prato favorito?</p>
+              <article>
+                <p>Strogonof de frango</p>
+              </article>
+            </article>
+          </section>
+          <section>
+            <h3>&ltblockquote&gt</h3>
+            <blockquote
+              cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+            >
+              <p>
+                Serve para marcar uma citação em bloco de outra fonte,
+                geralmente com recuo e formatação especial. Uma URL para a fonte
+                da citação pode ser dada usando o parâmetro 'cite'.
+              </p>
+            </blockquote>
+          </section>
+          <section>
+            <h3>&ltq&gt</h3>
+            <p>
+              É utilizada para indicar uma
+              <q
+                cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+                >citação curta</q
+              >
+              dentro de um texto, inserindo aspas automaticamente ao redor do
+              conteúdo citado. Também pode ser usado o parâmetro 'cite'
+            </p>
+          </section>
+        </article>
+
+        <article id="item8">
+          <header>
+            <h2>&ltfigure&gt, &ltfigcaption&gt, &ltpicture&gt</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+            <p>
+              São usadas para organizar e descrever imagens em uma página web.
+            </p>
+          </header>
+          <section>
+            <h3>&ltfigure&gt</h3>
+            <p>
+              É um container, ou seja, uma 'div' que você vai usar para colocar
+              coisas dentro dela. Define um bloco de conteúdo autônomo,
+              geralmente usado para agrupar uma imagem com uma legenda.
+            </p>
+            <figure>
+              <img
+                src="figure.jpeg"
+                alt="Exemplo de uso das tags figure e figcaption"
+                width="400"
+              />
+              <figcaption>
+                Exemplo de uso das tags 'figure' e 'figcaption'.
+              </figcaption>
+            </figure>
+          </section>
+          <section>
+            <h3>&ltbfigcaption&gt</h3>
+            <p>
+              Serve para adicionar uma descrição ou legenda à figura. Deve ser
+              usada dentro da tag 'figure' para que semanticamente seja
+              entendido que a descrição é relativa à midia que estiver em cima,
+              pode ser imagem ou vídeo.
+            </p>
+          </section>
+          <section>
+            <h3>&ltpicture&gt</h3>
+            <p>
+              É utilizada para oferecer diferentes versões de uma imagem para
+              diferentes dispositivos, permitindo que o navegador escolha a mais
+              apropriada com base em condições como resolução de tela.
+            </p>
+            <picture>
+              <source srcset="flor2.jpeg" media="(min-width: 600px)" />
+              <img
+                src="flor.jpeg"
+                alt="imagem de uma flor rosa em alta resolução"
+              />
+            </picture>
+          </section>
+        </article>
+
+        <article id="item9">
+          <header>
+            <h2>Resenha: o que é SEO</h2>
+            <a href="#inicio">
+              <img
+                src="seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>
+            Search Engine Optimization (Otimização para Mecanismos de Buscas)
+          </p>
+          <p>
+            É um conunto de técnicas voltadas para otimizar o posicionamento do
+            site em mecanismos de buscas.
+          </p>
+          <p>
+            A SEO é crucial para que seu site seja encontrado por mecanismos de
+            busca, seja ele um site simples, um site com conteúdo relevante ou um
+            site com conteúdo que seja útil para os visitantes.
+          </p>
+          <img src="seo.jpg" alt="Conjunto de técnicas do SEO" width="400">
+
+          <h5>
+            Dicas para otimizar seu HTML para ele aparecer melhor nas buscas.
+          </h5>
+          <ul>
+            <li>
+              <p>
+                'title' - adicione títulos que condizem com o conteúdo da página
+                e que tenha entre 50 e 60 caracters (quantidade máxima de
+                caracteres do título da busca do Google).
+              </p>
+            </li>
+            <li>
+              <p>
+                No 'head' da página coloca a tag &ltmeta name="description"
+                content="texto que vai aparecer abaixo do título"&gt.
+              </p>
+            </li>
+            <li>
+              <p>Utilizar a semântica do HTML.</p>
+            </li>
+            <li>
+                <p>Estudar sobre a comunidade colaborativa <a href="https://schema.org/">Schema.org</a></p>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/eloizaams"><i>Eloiza Souza</i></a>
+      </p>
+      <address>Rua das Flores, 20.</address>
+      <a href="tel:+5532988887777">Telefone</a>
+    </footer>
+  </body>
+</html>
