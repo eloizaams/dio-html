@@ -3,50 +3,442 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso HTML - DIO</title>
+    <title>Recurso Especiais HTML</title>
     <style>
       body {
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        background-color: #23282c;
-        color:#fafafa;
-        text-align: center;
+        color: #1e2027;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
       }
-      .links {
-        background-color: #ccc;
-        font-size: 18px;
+      body header {
+        background-color: #f7f7f7;
+        padding: 20px;
+        margin: 0px;
       }
-      .links a {
+      body header h1{
+      padding-left: 25px;
+      }
+      header nav ul li a {
         text-decoration: none;
-        color:#23282c;
-       line-height: 30px;      
+        color: #1e2027;
+      }
+      header nav ul li {
+        padding: 8px;
+      }
+      header nav ul li:hover {
+        background-color: #fafafa;
+        color: #737b97;
+      }
+      body main {
+        background-color: #fafafa;
+       
+      }
+     
+      main article {
+        background-color: #f7f7f7;
+        margin: 15px 0 ;
+        padding: 15px; 
+      }
+      kbd{
+        border: solid 1px #222;
+        border-radius: 3px;
+        padding:0 3px;
+        color: #222;
+      }
+      code{
+        background-color: f1f1f1;
+        color: #b62727;
+      }
+      pre{
+        background-color:#fff;
+        border-left: 5px solid #5a5c5e;
+        margin:15px 50px;
+        padding:0 25px;
+      }
+      pre p{
+        font-style: italic;
+        color: #034403;
+      }
+      #rain-effect {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      footer {
+        background-color: #808080;
+        color: #e7e7e7;
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+        margin: 0;
+      }
+      footer a {
+        text-decoration: none;
+        color: #d7d7d7;
+      }
+      footer a:hover {
+        background-color: #777;
       }
     </style>
   </head>
   <body>
-    <h1>Formação HTML Web Developer</h1>
-    <p>DIO - Digital Inovation One</p>
-    <h2>Conteúdos do curso</h2>
-    <div class="links">
-      <a href="introducao/index.html" target="_blank"
-        >Introdução ao uso das tags</a
-      ><br />
-      <a href="formatacoes/index.html" target="_blank">Formatações básicas</a
-      ><br />
-      <a href="formularios/index.html" target="_blank">Formulários</a><br />
-      <a href="midias/index.html" target="_blank">Mídias</a><br />
-      <a href="tabelas/index.html" target="_blank">Tabelas</a><br />
-      <a href="desafio_1/index.html" target="_blank"
-        >Desafio 1 - Site de clínica médica</a
-      ><br />
+    <header>
+      <h1 id="inicio">HTML: Recursos Especiais</h1>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#item1">&ltdatalist&gt</a></li>
+          <li><a href="#item2">&ltcode&gt, &ltkbd&gt, &ltpre&gt</a></li>
+          <li><a href="#item3">&ltdetails&gt, &ltsumary&gt</a></li>
+          <li><a href="#item4">&ltmeter&gt, &ltprogress&gt</a></li>
+          <li><a href="#item5">&ltmark&gt (com Javascript)</a></li>
+          <li><a href="#item6">&ltcanvas&gt</a></li>
+          <li><a href="#item7">Novos atributos bem úteis no HTML5</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="itens">
+        <article id="item1">
+          <header>
+            <h2>&ltdatalist&gt</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>Define uma lista de opções predefinidas para um campo &ltinput&gt, <mark>permitindo que o usuário selecione uma das opções sugeridas ao digitar no campo.</mark></p>
+          <p>Este é o <strong>Combo Box</strong> ele dá uma lista de opções, onde só é permitido escolher entre as opções disponíveis. Não permite digitar, quando tem muitas opções fica mais difícil a navegação. Ele permite que ao digitar uma letra ele vai para a primeira opção que comece com a letra.</p>
+          <select name="browsers">
+            <option value=>Selecione um navegador</option>
+            <option value="chrome">Google Chrome</option>
+            <option value="firefox">Mozila Firefox</option>
+            <option value="edge">Microsoft Edge</option>
+            <option value="safari">Safari</option>
+            <option value="opera">Opera</option>
+          </select>
+          <p>O <strong>Data List</strong> oferece sugestões para preencher o campo. é interessante quando se quer utilizar buscas sugeridas.</p>
+          <input type="search" name="search" list="browsers">
+          <datalist id="browsers">
+            <option>Google Chrome</option>
+            <option>Mozila Firefox</option>
+            <option>Microsoft Edge</option>
+            <option>Safari</option>
+            <option>Opera</option>
+          </datalist>
+        </article>
 
-      <a href="semantico/index.html" target="_blank">HTML semantico</a><br />
-      <a href="recursos_especiais/index.html" target="_blank"
-        >Recursos Especiais</a
-      ><br />
+        <article id="item2">
+          <header>
+            <h2>&ltcode&gt, &ltkbd&gt, &ltpre&gt</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>Tags voltadas para colocar comandos ou código fonte dentro da página HTML. Dá uma formatação pré-definida do navegador.</p>
+          <p><strong>&ltcode&gt;</strong> é usado para mostrar código fonte, como HTML, CSS, JavaScript, PHP, etc. O código é mostrado com uma fonte monoespaçada. <br>Exemplo: Para trocar o fundo de um elemento, utilize o comando <code>background-color</code>.</p>
+          <p><strong>&ltkbd&gt;</strong> é usado para mostrar teclas no teclado. O texto é em itálico e não é formatado como código. <br>Exemplo:  Para copiar esta informação, pressione <kbd>Ctrl</kbd>+<kbd>C</kbd>.</p>
+          <><strong>&ltpre&gt;</strong> é usado para mostrar código fonte, mas não dá a característica de fonte monoespaçada. O código é mostrado com uma fonte padrão do navegador.<br>Exemplo: Comando completo para alerar a cor de fundo:</p>
+          <pre>
+            <p>// Código para mudar a cor de fundo da tag code.</p>
+           <code>
+            code{
+              background-color: f1f1f1;
+              color: #801a1a;
+            }
+           </code>
+          </pre>         
+        </article>
 
-      <a href="desafio_2/index.html" target="_blank"
-        >Desafio 2 - Recriando o Wikipedia com Layout Moderno</a
-      ><br />
-    </div>
+        <article id="item3">
+          <header>
+            <h2>&ltdetails&gt, &ltsumary&gt</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p><strong>&ltdetails&gt</strong> cria um widget interativo que o usuário pode abrir ou fechar.é usado para mostrar uma lista de detalhes sobre um item. Ele é mais útil quando há muitos detalhes para mostrar.  Ideal para seções de conteúdo que podem ser ocultas, como em uma lista de produtos e FAQs.
+            <p><strong>&ltsumary&gt</strong> define um título ou legenda para o elemento &ltdetails&gt. Esse título é o que aparece na interface e pode ser clicado para abrir/fechar o &ltdetails&gt.</p> 
+            <br>Exemplo: Uma lista de produtos com detalhes:</p>
+         <details>
+            <summary>Detalhes do produto 1</summary>
+            <p>Descrição do produto 1</p>
+          </details>
+          <details>
+            <summary>Detalhes do produto 2</summary>
+            <p>Descrição do produto 2</p>
+          </details>
+          <details>
+            <summary>Detalhes do produto 3</summary>
+            <p>Descrição do produto 3</p>
+          </details>
+        </article>
+
+        <article id="item4">
+          <header>
+            <h2>&ltmeter&gt, &ltprogress&gt</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>Os elementos &ltmeter&gt e &ltprogress&gt são usados para mostrar valores numéricos, como progresso de uma tarefa, porcentagem, etc.</p>
+          <p><strong>&ltmeter&gt</strong> é um medidor, representa uma medição escalar dentro de um intervalo conhecido. Utilizado para exibir valores que têm um intervalo máximo e mínimo, como uma barra de progresso numérica.<br>Exemplo: Mostrar o espaço ocupado em um disco:</p>
+          <meter value="512" min="0" max="1025"></meter>
+          <p><strong>&ltprogress&gt</strong> exibe o progresso de uma tarefa, como um download ou upload. Pode ser atualizado dinamicamente via JavaScript para refletir o estado da tarefa. <br>Exemplo: Mostrar a progressão de uma tarefa:</p>
+          <p>O &ltprogress&gt sem nenhum parâmetro dá esse efeito de ficar se movendo.</p>
+          <progress></progress>
+          <p>O &ltprogress&gt com parâmetro fica estático, permitindo alterar o "value" pelo Javascript.</p>
+          <progress id="progress" min="0" max="100" value="0"></progress>
+          <script>
+            var progress = document.getElementById('progress');
+            const interval = setInterval(() => {
+              progress.value += 1;
+              if (progress.value >= 100){
+                clearInterval(interval);
+                alert("Carregamento realizado com sucesso!");
+              }
+            }, 100);
+           
+          </script>
+        </article>
+
+        <article id="item5">
+          <header>
+            <h2>&ltmark&gt (com Javascript)</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>Realça o texto dentro da tag com uma cor de fundo. Com JavaScript, pode ser usada para destacar dinamicamente partes do texto, como em uma pesquisa dentro da página.</p>
+          <input type="text" id="busca"><br>
+          <p id="descricao">Os cursos da DIO são programas de formação criados com empresas inovadoras, aplicando uma metodologia para que o aluno domine as tecnologias utilizadas no mercado e também mergulhe nas novas e mais atuais teconlogias que impactarão o futuro dos negócios digitais.</p>
+          <script>
+            const searchField = document.getElementById('busca');
+            const descriptionObject = document.getElementById('descricao');
+            const textToSearch = descriptionObject.innerHTML;
+          
+            searchField.addEventListener('input', function() {
+              realizaBusca(searchField.value);
+            });
+          
+            function realizaBusca(busca) {
+              if (busca.trim() === "") {
+                // Se o campo de busca estiver vazio, restaura o texto original
+                descriptionObject.innerHTML = textToSearch;
+                return;
+              }
+          
+              const regex = new RegExp(`(${busca})(?!([^<]*>[^<]*</mark>))`, 'ig');
+              const occurrences = textToSearch.match(regex);
+          
+              if (occurrences) {
+                descriptionObject.innerHTML = textToSearch.replace(regex, '<mark>$1</mark>');
+              }
+              searchField.addEventListener('keyup', (e) => realizBusca(e.target.value));
+            }
+          </script>
+        </article>
+
+        <article id="item6">
+          <header>
+            <h2>&ltcanvas&gt</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <p>Define uma área de desenho na web onde é possível renderizar gráficos, animações, ou outras imagens via JavaScript. Usado para jogos, visualizações de dados e outras interações gráficas complexas.</p>
+          <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+          </canvas>
+          <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+          </script>
+          <p>Canvas - exemplos:</p>
+          <a href="https://www.w3schools.com/html/html5_canvas.asp">W3Schools</a><br>
+          <a href="https://codepen.io/tag/canvas">CodePen</a>
+
+          <canvas id="rain-effect"></canvas>
+          <script>
+            class RainChar {
+              constructor(font, charSize, chars, bg, fg) {
+                // Defining the parameters
+                this.font = font;
+                this.charSize = charSize;
+                this.chars = chars;
+                this.bg = bg;
+                this.fg = fg;
+
+                // Setting up the canvas
+                const canvas = document.getElementById("rain-effect");
+                this.context = canvas.getContext("2d");
+                this.size = [canvas.offsetWidth, canvas.offsetHeight];
+                canvas.width = this.size[0];
+                canvas.height = this.size[1];
+
+                this.context.fillStyle = this.bg;
+                this.context.fillRect(0, 0, ...this.size);
+
+                // Creating the particles array
+                this.particles = [];
+                const particleCount =
+                  (this.size[0] * this.size[1]) / this.charSize ** 2 / 10;
+
+                for (let i = 0; i < particleCount; i++) {
+                  this.particles.push(this.newParticle());
+                }
+              }
+
+              newParticle() {
+                return {
+                  x: Math.random() * this.size[0],
+                  y: -Math.random() * this.size[1] * 2,
+                  size: Math.floor(
+                    Math.random() * (this.charSize * 2 - this.charSize / 2) +
+                      this.charSize / 2
+                  )
+                };
+              }
+
+              drawParticles() {
+                this.context.fillStyle = this.fg;
+                this.particles.forEach((particle) => {
+                  this.context.font = `${particle.size}px ${this.font}`;
+                  const randomChar = this.chars[
+                    Math.floor(Math.random() * this.chars.length)
+                  ];
+                  this.context.fillText(randomChar, particle.x, particle.y);
+                });
+              }
+
+              updateParticles() {
+                this.particles.forEach((particle) => {
+                  if (particle.y > this.size[1]) {
+                    Object.assign(particle, this.newParticle());
+                  } else {
+                    particle.y += particle.size;
+                  }
+                });
+              }
+
+              clearCanvas() {
+                this.context.globalAlpha = 0.25;
+                this.context.fillStyle = this.bg;
+                this.context.fillRect(0, 0, ...this.size);
+                this.context.globalAlpha = 1;
+              }
+
+              play() {
+                this.clearCanvas();
+                this.drawParticles();
+                this.updateParticles();
+                setTimeout(() => {
+                  this.play();
+                }, 50);
+              }
+            }
+
+            const chars = "ABCDEFGHIJKLMNOPRSTUVWXYZ";
+            const rain = new RainChar("monospace", 20, chars, "black", "lime");
+            rain.play();
+
+          </script>
+        </article>
+
+        <article id="item7">
+          <header>
+            <h2>Novos atributos bem úteis no HTML5</h2>
+            <a href="#inicio">
+              <img
+                src="img/seta-esquerda.png"
+                alt="Atalho para voltar para o início da página"
+                width="20"
+              />
+            </a>
+          </header>
+          <form method="get" action="" id="form1"></form>
+          <form method="get" action="" id="form2"></form>
+          <ul>
+           <li>
+              <p><strong>form</strong> permite que você especifique a qual formulário um elemento deve se associar. O valor desse atributo deve ser o id do formulário ao qual o controle está vinculado.</p>
+            </li>
+            <li>
+              <p><strong>autofocus</strong> é usado para especificar que um elemento deve receber automaticamente o foco quando a página carrega.</p>
+              <p> Apenas um elemento em uma página pode ter o autofocus. Se houver mais de um elemento com autofocus, o primeiro no código será focado.</p>
+              <p>Quando a página é carregada ou o elemento é inserido no DOM, o navegador automaticamente coloca o cursor ou foco de interação no elemento que tem o autofocus. Isso é útil para melhorar a experiência do usuário, direcionando imediatamente sua atenção para um campo específico.</p>
+            </li>
+            <li>
+              <p><strong>placeholder</strong> é usado para fornecer um texto de dica dentro de um campo de formulário (como %ltinput&gt ou &lttextarea&gt) que desaparece quando o usuário começa a digitar no campo.</p>
+              <p>Embora útil, o placeholder não deve substituir um rótulo (&ltlabel&gt), especialmente por razões de acessibilidade, pois alguns leitores de tela não reconhecem o placeholder como um rótulo.</p>
+            </li>
+            <li>
+              <p><strong>required</strong> é usado para indicar que um campo de formulário é obrigatório e deve ser preenchido antes de o formulário ser enviado.</p>
+              <p>Se um campo que possui o atributo required estiver vazio no momento do envio do formulário, o navegador impedirá o envio e alertará o usuário de que o campo precisa ser preenchido.</p>
+              <p>A validação é feita automaticamente pelo navegador, sem a necessidade de JavaScript adicional. Se o campo não for preenchido, uma mensagem de erro padrão é exibida, e o foco é colocado no campo obrigatório.</p>
+              <p>Embora o required faça parte da validação nativa do HTML5, as mensagens de erro padrão podem ser personalizadas com JavaScript, se necessário.</p>
+            </li>
+            <li>
+              <p><strong>disabled</strong> quando um elemento possui o atributo disabled, ele não pode ser clicado, editado ou selecionado pelo usuário. Além disso, o navegador não envia o valor desse elemento quando o formulário é submetido.</p>
+              <p>Elementos disabled geralmente são exibidos com um estilo visual diferenciado, como um texto cinza ou esmaecido, para indicar ao usuário que estão inativos.</p>
+              <p> Não é possível interagir com elementos desativados, nem mesmo com JavaScript (por exemplo, onclick). Contudo, o atributo disabled pode ser ativado ou desativado dinamicamente usando JavaScript.</p>
+              <fieldset>
+                <legend>Preencha o login</legend>
+                  <input type="text" name="username" placeholder="Usuário" form="form1" autofocus required>
+                <input type="password" name="password" placeholder="Senha" form="form1" required>
+                <button type="submit" form="form1">Login</button>
+              </fieldset>
+            </li>
+
+            <li>
+              <p><strong>minlength</strong> e <strong>maxlength</strong> definem o número mínimo e máximo de caracteres que o usuário deve inserir em um campo de texto para que o formulário seja considerado válido.
+              </p>
+              <fieldset>
+                <legend>Observações</legend>
+                <textarea minlength="10" maxlength="250" id="observation" cols="30" rows="5"  form="form2"></textarea>
+                <button type="submit" form="form2">Enviar</button>
+              </fieldset>
+            </li>
+            <li>
+              <p><strong>contenteditable</strong> é usado para tornar um elemento HTML editável diretamente pelo usuário, permitindo que ele altere o conteúdo do elemento no navegador</p>
+              <p>Pode ser usado em gerador de página HTML dinâmico.</p>
+              <h4 contenteditable>Este conteúdo pode ser alterado.</h4>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/eloizaams"><i>Eloiza Souza</i></a>
+      </p>
+    </footer>
   </body>
 </html>
